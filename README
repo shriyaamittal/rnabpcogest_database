@@ -1,0 +1,17 @@
+# RNABPCOGEST
+
+Website: bioinf.iiit.ac.in/RNABPCOGEST
+
+Citation: 
+
+@article{Bhattacharya2015,
+  doi = {10.1093/database/bav011},
+  url = {https://doi.org/10.1093/database/bav011},
+  year  = {2015},
+  month = {jan},
+  publisher = {Oxford University Press ({OUP})},
+  volume = {2015},
+  author = {Sohini Bhattacharya and Shriyaa Mittal and Swati Panigrahi and Purshotam Sharma and Preethi S. P. and Rahul Paul and Sukanya Halder and Antarip Halder and Dhananjay Bhattacharyya and Abhijit Mitra},
+  title = {{RNABP} {COGEST}: a resource for investigating functional {RNAs}},
+  journal = {Database}
+}
