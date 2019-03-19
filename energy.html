@@ -1,0 +1,136 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/energy.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"> 
+    <title>
+      Energy
+    </title>
+
+<script language="javascript" type="text/javascript">
+
+      function showhide(frm)
+      {
+        if (frm.table1.checked == true)
+        {
+          document.getElementById("c4").disabled=false;
+          document.getElementById("c5").disabled=false;
+          document.getElementById("c6").disabled=false;
+          document.getElementById("c7").disabled=false;
+          document.getElementById("c8").disabled=false;
+          document.getElementById("c9").disabled=false;
+          document.getElementById("c10").disabled=false;
+          document.getElementById("c11").disabled=false;
+          document.getElementById("c12").disabled=false;
+          document.getElementById("c13").disabled=true;
+          document.getElementById("c14").disabled=true;
+        }
+	if (frm.table2.checked == true)
+        {
+	  document.getElementById("c7").disabled=false;
+          document.getElementById("c8").disabled=false;
+          document.getElementById("c13").disabled=false;
+          document.getElementById("c14").disabled=false;
+          document.getElementById("c4").disabled=true;
+          document.getElementById("c5").disabled=true;
+          document.getElementById("c6").disabled=true;
+          document.getElementById("c9").disabled=true;
+          document.getElementById("c10").disabled=true;
+          document.getElementById("c11").disabled=true;
+          document.getElementById("c12").disabled=true;
+	}
+      }
+</script>
+
+    <hr size="15px" noshade>
+    <hr>
+
+    <table>
+      <tr>
+        <td align="left"><img src="./images/monogram.png" alt="monogram" width="150px"></td>
+        <td align="center" width="80%"><img src="./images/energy.png" alt="logo" width="500px"></td>
+        <td align="right"><a href="http://iiit.ac.in/"><img src="./images/IIIT.jpg" alt="IIIT-H" width="150px"></a></td>
+      </tr>
+    </table>
+
+    <hr size="15px" noshade>
+    <hr>
+
+  </head>
+
+  <body>
+    <p><a href="./index.html"><img align="right" src="./images/icon_home.jpg" alt="Go to home page" border="0" width="40px"></a>
+    <a href='javascript:history.go(-1)'><img align='right' src='./images/icon_back.jpg' alt='Go back' border='0' width='40px'></a></p>
+
+This search page is mainly useful for comparing different energy related data for all the base pair geometries.</br></br>
+RNABP COGEST contains intrinsic interaction energy data for all available or modelled non canonical base pairs, calculated by using different QM methods. As interaction energy data have been mostly collected from existing literatures, interaction energy values for all base pairs, reported in the database are not calculated by using same QM method and again one particular QM method has not been implemented for calculating interaction energy of all the basepair geometries. For example, interaction energies of W:W and H:H base pairs have been calculated using MP2/aug-cc-PVDZ method and RI-MP2/aug-cc-PVDZ method is used while calculating interaction energies of H:S base-pairs. Again, for a particular base pair, results can vary depending on the method used. So, it is better to specify energy calculation method from the drop down list before searching with different energy values to compare stability of different base pairs.</br></br>
+(All energy decompsition using Kitaura Morokuma scheme has been carried out at HF/6-31g(d,p) level of theory and energy decompsition using DFT-SAPT scheme has been carried out at PBE0AC/aug-cc-pVDZ level of theory)</br></br>
+
+    <form action="./energy.php" method="post">
+      <table>
+
+      <tr><td></td><td>Energy calculation method</td><td>
+          <select id="s1" name="energy_calc_method">
+            <option value="HF/6-31G(d,p)">HF/6-31G(d,p)</option>
+            <option value="MP2/aug-cc-pVDZ">MP2/aug-cc-pVDZ</option>
+            <option value="RI-MP2/aug-cc-pVDZ">RI-MP2/aug-cc-pVDZ</option>
+          </select>
+      </td></tr>
+      <tr><td><input type="checkbox" name="energy[]" value="E_interaction" id="c1" onchange="document.getElementById('t1').disabled=!this.checked;"></td><td>E_interaction</td><td><input type="text" name="E_interactiontext" id="t1" disabled></td></tr>
+
+    <tr><td><input type="checkbox" name=energy[]" value="E_HF" id="c2" onchange="document.getElementById('t2').disabled=!this.checked;"></td><td>E_HF</td><td><input type="text" name="E_HFtext" id="t2" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_corr" id="c3" onchange="document.getElementById('t3').disabled=!this.checked;"></td><td>E_correlation</td><td><input type="text" name="E_corrtext" id="t3" disabled></td></tr>
+      <tr><td></td></tr>
+      <tr><td></td></tr>
+      <tr><td></td></tr>
+      <tr><td></td><td>Energy decomposition method</td></tr>
+      <tr><td><input type="radio" name="table[]" value="Kitaura-Morokuma" id="table1" onClick="showhide(this.form)"></td><td>Kitaura-Morokuma</td></tr>
+      <tr><td><input type="radio" name="table[]" value="DFT_SAPT" id="table2" onClick="showhide(this.form)"></td><td>DFT_SAPT</td></tr>
+      <tr><td></td></tr>
+      <tr><td></td></tr>
+      <tr><td></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_tot" id="c4" onchange="document.getElementById('t4').disabled=!this.checked;" disabled></td><td>E_total</td><td><input type="text" name="E_tottext" id="t4" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_def" id="c5" onchange="document.getElementById('t5').disabled=!this.checked;" disabled></td><td>E_deformation</td><td><input type="text" name="E_deftext" id="t5" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_int" id="c6" onchange="document.getElementById('t6').disabled=!this.checked;" disabled></td><td>E_interaction</td><td><input type="text" name="E_inttext" id="t6" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_elec" id="c7" onchange="document.getElementById('t7').disabled=!this.checked;" disabled></td><td>E_electrostatic</td><td><input type="text" name="E_electext" id="t7" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_ex" id="c8" onchange="document.getElementById('t8').disabled=!this.checked;" disabled></td><td>E_exchange repulsion</td><td><input type="text" name="E_extext" id="t8" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_pol" id="c9" onchange="document.getElementById('t9').disabled=!this.checked;" disabled></td><td>E_polarization</td><td><input type="text" name="E_poltext" id="t9" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_ct" id="c10" onchange="document.getElementById('t10').disabled=!this.checked;" disabled></td><td>E_charge transfer</td><td><input type="text" name="E_cttext" id="t10" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_hoc" id="c11" onchange="document.getElementById('t11').disabled=!this.checked;" disabled></td><td>E_higher order coupling</td><td><input type="text" name="E_hoctext" id="t11" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="BSSE" id="c12" onchange="document.getElementById('t12').disabled=!this.checked;" disabled></td><td>BSSE</td><td><input type="text" name="BSSEtext" id="t12" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_ind_sapt" id="c13" onchange="document.getElementById('t13').disabled=!this.checked;" disabled></td><td>E_induction</td><td><input type="text" name="E_ind_sapttext" id="t13" disabled></td></tr>
+
+      <tr><td><input type="checkbox" name=energy[]" value="E_disp_sapt" id="c14" onchange="document.getElementById('t14').disabled=!this.checked;" disabled></td><td>E_dispersion</td><td><input type="text" name="E_disp_sapttext" id="t14" disabled></td></tr>
+
+      </table>
+      <input type="submit" name="submit_form" value="submit"></td>
+
+    </form>
+
+
+    <form action="./energy_qualitative.php" method="post">
+    Choose the type of base pair you want:
+    <table>
+    <tr><td><input type="radio" name="qualitative" value="weak">Weak</td></tr>
+    <tr><td><input type="radio" name="qualitative" value="medium">Medium</td></tr>
+    <tr><td><input type="radio" name="qualitative" value="strong">Strong</td></tr>
+    </table>
+    <input type="submit" name="submit_form" value="submit"></td>
+    </form>
+
+
+  </body>
+
+</html>

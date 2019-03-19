@@ -1,0 +1,112 @@
+<html>
+
+ <head>
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"> 
+    <script src="./js/toc.js" type="text/javascript"></script>
+
+    <title>
+      RNABP COGEST
+    </title>
+  </head>
+
+  <body onload="generateTOC(document.getElementById('toc'));">
+
+    <hr size="15px" noshade>
+    <hr>
+    <table>
+      <tr>
+        <td align="left"><img src="./images/monogram.png" alt="monogram" width="150px"></td>
+        <td align="center" width="80%"><img src="./images/logo.png" alt="logo" width="500px"></td>
+        <td align="right"><a href="http://iiit.ac.in/"><img src="./images/IIIT.jpg" alt="IIIT-H" width="150px"></a></td>
+      </tr>
+    </table>
+    
+    <hr size="15px" noshade>
+    <hr>
+
+    <p><a href="./index.html"><img align="right" src="./images/icon_home.jpg" alt="Go to home page" border="0" width="40px"></a>
+    <a href='javascript:history.go(-1)'><img align='right' src='./images/icon_back.jpg' alt='Go back' border='0' width='40px'></a></p>
+
+    This is the general information page to understand meaning of different naming conventions that have been made use of during the construction of the database. </br>Some are widely known, others have been introduced for the ease of representation of information to make RNABP COGEST more interactive.</br>
+    <div id="toc"></div>
+    <p>
+      <h2>Base Pair</h2>
+      <img src="./images/bp_name.jpeg" width="600px">
+      <h2>Isostericity matrices</h2>
+      <img src="./images/isostericity_pic.png">
+</br>Reference: N. B. Leontis, J. Stombaugh and E. Westhof, Nucleic Acids Research 2002, 30(16): 3497-3531
+
+      <h2>Base pair parameters</h2>
+      <img src="./images/bp_parameters.png" width="400px">
+      <h2>RMSD</h2>
+      RMSD naming conventions are as follows. </br>Ex. RMSD1 is the RMSD information between H-opt HF using 6-31G(d,p) basis set in gas phase and Full-opt HF using 6-31G(d,p) basis set in gas phase optimizations.</br></br>
+      <table border=2>
+        <tr>
+	<th>Name</th>
+	<th>Optimization 1</th>
+	<th>optimization 2</th>
+        </tr>
+        <tr>
+	<td>RMSD1</td>
+	<td>H-opt HF 6-31G(d,p) gas</td>
+	<td>Full-opt HF 6-31G(d,p) gas</td>
+        </tr>
+        <tr>
+	<td>RMSD2</td>
+	<td>H-opt HF 6-31G(d,p) gas</td>
+	<td>Full-opt B3LYP 6-31G(d,p) gas</td>
+        </tr>
+        <tr>
+	<td>RMSD3</td>
+	<td>Full-opt HF 6-31G(d,p) gas</td>
+	<td>Full-opt B3LYP 6-31G(d,p) gas</td>
+        </tr>
+        <tr>
+	<td>RMSD4</td>
+	<td>H-opt HF 6-31G(d,p) gas</td>
+	<td>Full-opt B3LYP 6-31G(d,p) Solvent (COSMO)</td>
+        </tr>
+        <tr>
+	<td>RMSD5</td>
+	<td>H-opt B3LYP ccPVTZ gas</td>
+	<td>Full-opt B3LYP ccPVTZ gas</td>
+        </tr>
+     </table>
+      <h2>Energy</h2>
+Meanings of the terminologies used for energy data, </br></br>
+      <b>E_interaction</b>: Interaction energy</br>
+<b>E_HF</b>: Hartree Fock component of the interaction energy</br>
+<b>E_corr</b>: Electron correlation term of the interaction energy</br>
+<b>E_def</b>: Deformation energy</br>
+<b>E_tot</b>: Total energy; Interaction energy and deformation energy in total gives the total energy term.</br>
+</br>
+In the Energy decomposition table,</br>
+<b>E_int</b>: Interaction energy</br>
+<b>E_elec</b>: Electrostatic component of the interaction energy</br>
+<b>E_ex</b>: Exchange repulsion component of the interaction energy</br>
+<b>E_pol</b>: Polarization component of the interaction energy</br>
+<b>E_ct</b>: Charge transfer component of the interaction energy</br>
+<b>E_hoc</b>: Higher order coupling component of the interaction energy</br>
+<b>E_ind</b>: Induction component of the interaction energy</br>
+<b>E_disp</b>: Dispersion component of the interaction energy</br>
+</br>
+E_int, E_elec, E_ex, E_pol, E_ct, and E_hoc terms are obtained by using Kitaura Morokuma decomposition scheme with HF/6-31G(d,p) method.</br>
+E_elec, E_ex, E_ind, and E_disp terms are calculated by using DFT-SAPT energy decomposition scheme with PBE0AC/aug-cc-pVDZ method.</br>
+For W:S and S:S geometry DFT-SAPT scheme has been used for energy decomposition.</br>
+
+      <h2>H-bonding</h2>
+Meanings of the terminologies used for energy data, </br></br>
+<b>DA_dist</b>: Distance (in Angstrom) between the Donor and Acceptor atom</br>
+<b>HA_dist</b>: Distance (in Angstrom) between the Hydrogen atom and the Acceptor atiom</br>
+<b>DHA_angle</b>: Angle (in degrees) formed by the Donor atom, Hydrogen atom and Acceptor atom forming the hydrogen bond</br>
+    </p>
+   
+    <hr size="15px" noshade>
+    <hr>
+   <font size="2"> RNABP COGEST &copy; CCNSB, IIIT Hyderabad 2014</br>
+
+  </body>
+
+</html>

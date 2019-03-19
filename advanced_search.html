@@ -1,0 +1,449 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/advanced_search.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"> 
+    <title>
+      Advanced Search
+    </title>
+
+    <script language="javascript" type="text/javascript">
+
+      function showhide(frm)
+      {
+        if (frm.table1.checked == true)
+        {
+          document.getElementById("Base_pair1").disabled=false;
+          document.getElementById("Base_pair2").disabled=false;
+          document.getElementById("Base_pair3").disabled=false;
+          document.getElementById("Base_pair4").disabled=false;
+          document.getElementById("Base_pair5").disabled=false;
+          document.getElementById("Base_pair6").disabled=false;
+          document.getElementById("Base_pair7").disabled=false;
+          document.getElementById("Base_pair8").disabled=false;
+          document.getElementById("Base_pair9").disabled=false;
+          document.getElementById("Base_pair10").disabled=false;
+          document.getElementById("Base_pair11").disabled=false;
+          document.getElementById("Base_pair13").disabled=false;
+          document.getElementById("Base_pair15").disabled=false;
+          document.getElementById("Base_pair17").disabled=false;
+          document.getElementById("Base_pair19").disabled=false;
+        }
+        else 
+        {
+          document.getElementById("Base_pair1").disabled=true;
+          document.getElementById("Base_pair2").disabled=true;
+          document.getElementById("Base_pair3").disabled=true;
+          document.getElementById("Base_pair4").disabled=true;
+          document.getElementById("Base_pair5").disabled=true;
+          document.getElementById("Base_pair6").disabled=true;
+          document.getElementById("Base_pair7").disabled=true;
+          document.getElementById("Base_pair8").disabled=true;
+          document.getElementById("Base_pair9").disabled=true;
+          document.getElementById("Base_pair10").disabled=true;
+          document.getElementById("Base_pair11").disabled=true;
+          document.getElementById("Base_pair12").disabled=true;
+          document.getElementById("Base_pair13").disabled=true;
+          document.getElementById("Base_pair14").disabled=true;
+          document.getElementById("Base_pair15").disabled=true;
+          document.getElementById("Base_pair16").disabled=true;
+          document.getElementById("Base_pair17").disabled=true;
+          document.getElementById("Base_pair18").disabled=true;
+          document.getElementById("Base_pair19").disabled=true;
+          document.getElementById("Base_pair20").disabled=true;
+        }       
+        if (frm.table2.checked == true)
+        {
+          document.getElementById("Optimization_methods1").disabled=false;
+        }
+        else 
+        {
+          document.getElementById("Optimization_methods1").disabled=true;
+        }       
+        if (frm.table3.checked == true)
+        {
+          document.getElementById("Parameters1").disabled=false;
+          document.getElementById("Parameters2").disabled=false;
+          document.getElementById("Parameters3").disabled=false;
+          document.getElementById("Parameters4").disabled=false;
+          document.getElementById("Parameters5").disabled=false;
+          document.getElementById("Parameters6").disabled=false;
+          document.getElementById("Parameters7").disabled=false;
+          document.getElementById("Parameters8").disabled=false;
+          document.getElementById("Parameters10").disabled=false;
+          document.getElementById("Parameters12").disabled=false;
+          document.getElementById("Parameters14").disabled=false;
+          document.getElementById("Parameters16").disabled=false;
+          document.getElementById("Parameters18").disabled=false;
+          document.getElementById("Parameters20").disabled=false;
+        }
+        else 
+        {
+          document.getElementById("Parameters1").disabled=true;
+          document.getElementById("Parameters2").disabled=true;
+          document.getElementById("Parameters3").disabled=true;
+          document.getElementById("Parameters4").disabled=true;
+          document.getElementById("Parameters5").disabled=true;
+          document.getElementById("Parameters6").disabled=true;
+          document.getElementById("Parameters7").disabled=true;
+          document.getElementById("Parameters8").disabled=true;
+          document.getElementById("Parameters9").disabled=true;
+          document.getElementById("Parameters10").disabled=true;
+          document.getElementById("Parameters11").disabled=true;
+          document.getElementById("Parameters12").disabled=true;
+          document.getElementById("Parameters13").disabled=true;
+          document.getElementById("Parameters14").disabled=true;
+          document.getElementById("Parameters15").disabled=true;
+          document.getElementById("Parameters16").disabled=true;
+          document.getElementById("Parameters17").disabled=true;
+          document.getElementById("Parameters18").disabled=true;
+          document.getElementById("Parameters19").disabled=true;
+          document.getElementById("Parameters20").disabled=true;
+          document.getElementById("Parameters21").disabled=true;
+        }       
+        if (frm.table4.checked == true)
+        {
+          document.getElementById("RMSD1").disabled=false;
+          document.getElementById("RMSD2").disabled=false;
+        }
+        else 
+        {
+          document.getElementById("RMSD1").disabled=true;
+          document.getElementById("RMSD2").disabled=true;
+          document.getElementById("RMSD3").disabled=true;
+        }       
+        if (frm.table5.checked == true)
+        {
+          document.getElementById("BP_geometry1").disabled=false;
+          document.getElementById("BP_geometry2").disabled=false;
+        }
+        else 
+        {
+          document.getElementById("BP_geometry1").disabled=true;
+          document.getElementById("BP_geometry2").disabled=true;
+          document.getElementById("BP_geometry3").disabled=true;
+        }       
+        if (frm.table6.checked == true)
+        {
+          document.getElementById("H_bond1").disabled=false;
+          document.getElementById("H_bond2").disabled=false;
+          document.getElementById("H_bond3").disabled=false;
+          document.getElementById("H_bond4").disabled=false;
+          document.getElementById("H_bond5").disabled=false;
+          document.getElementById("H_bond6").disabled=false;
+          document.getElementById("H_bond8").disabled=false;
+        }
+        else 
+        {
+          document.getElementById("H_bond1").disabled=true;
+          document.getElementById("H_bond2").disabled=true;
+          document.getElementById("H_bond3").disabled=true;
+          document.getElementById("H_bond4").disabled=true;
+          document.getElementById("H_bond5").disabled=true;
+          document.getElementById("H_bond6").disabled=true;
+          document.getElementById("H_bond7").disabled=true;
+          document.getElementById("H_bond8").disabled=true;
+          document.getElementById("H_bond9").disabled=true;
+        }       
+        if (frm.table7.checked == true)
+        {
+          document.getElementById("Energy1").disabled=false;
+          document.getElementById("Energy2").disabled=false;
+          document.getElementById("Energy3").disabled=false;
+          document.getElementById("Energy4").disabled=false;
+          document.getElementById("Energy5").disabled=false;
+          document.getElementById("Energy6").disabled=false;
+          document.getElementById("Energy7").disabled=false;
+          document.getElementById("Energy8").disabled=false;
+          document.getElementById("Energy9").disabled=false;
+          document.getElementById("Energy10").disabled=false;
+          document.getElementById("Energy11").disabled=false;
+          document.getElementById("Energy12").disabled=false;
+          document.getElementById("Energy13").disabled=false;
+          document.getElementById("Energy14").disabled=false;
+          document.getElementById("Energy15").disabled=false;
+          document.getElementById("Energy17").disabled=false;
+          document.getElementById("Energy19").disabled=false;
+          document.getElementById("Energy21").disabled=false;
+          document.getElementById("Energy23").disabled=false;
+          document.getElementById("Energy25").disabled=false;
+          document.getElementById("Energy27").disabled=false;
+          document.getElementById("Energy29").disabled=false;
+          document.getElementById("Energy31").disabled=false;
+          document.getElementById("Energy33").disabled=false;
+          document.getElementById("Energy35").disabled=false;
+          document.getElementById("Energy37").disabled=false;
+          document.getElementById("Energy39").disabled=false;
+          document.getElementById("Energy41").disabled=false;
+        }
+        else 
+        {
+          document.getElementById("Energy1").disabled=true;
+          document.getElementById("Energy2").disabled=true;
+          document.getElementById("Energy3").disabled=true;
+          document.getElementById("Energy4").disabled=true;
+          document.getElementById("Energy5").disabled=true;
+          document.getElementById("Energy6").disabled=true;
+          document.getElementById("Energy7").disabled=true;
+          document.getElementById("Energy8").disabled=true;
+          document.getElementById("Energy9").disabled=true;
+          document.getElementById("Energy10").disabled=true;
+          document.getElementById("Energy11").disabled=true;
+          document.getElementById("Energy12").disabled=true;
+          document.getElementById("Energy13").disabled=true;
+          document.getElementById("Energy14").disabled=true;
+          document.getElementById("Energy15").disabled=true;
+          document.getElementById("Energy16").disabled=true;
+          document.getElementById("Energy17").disabled=true;
+          document.getElementById("Energy18").disabled=true;
+          document.getElementById("Energy19").disabled=true;
+          document.getElementById("Energy20").disabled=true;
+          document.getElementById("Energy21").disabled=true;
+          document.getElementById("Energy22").disabled=true;
+          document.getElementById("Energy23").disabled=true;
+          document.getElementById("Energy24").disabled=true;
+          document.getElementById("Energy25").disabled=true;
+          document.getElementById("Energy26").disabled=true;
+          document.getElementById("Energy27").disabled=true;
+          document.getElementById("Energy28").disabled=true;
+          document.getElementById("Energy29").disabled=true;
+          document.getElementById("Energy30").disabled=true;
+          document.getElementById("Energy31").disabled=true;
+          document.getElementById("Energy32").disabled=true;
+          document.getElementById("Energy33").disabled=true;
+          document.getElementById("Energy34").disabled=true;
+          document.getElementById("Energy35").disabled=true;
+          document.getElementById("Energy36").disabled=true;
+          document.getElementById("Energy37").disabled=true;
+          document.getElementById("Energy38").disabled=true;
+          document.getElementById("Energy39").disabled=true;
+          document.getElementById("Energy40").disabled=true;
+          document.getElementById("Energy41").disabled=true;
+          document.getElementById("Energy42").disabled=true;
+        }       
+      } 
+
+    </script>
+
+<hr size="15px" noshade>
+    <hr>
+    <table>
+      <tr>
+        <td align="left"><img src="./images/monogram.png" alt="monogram" width="150px"></td>
+        <td align="center" width="80%"><img src="./images/advanced_search.png" alt="logo" width="500px"></td>
+        <td align="right"><a href="http://iiit.ac.in/"><img src="./images/IIIT.jpg" alt="IIIT-H" width="150px"></a></td>
+      </tr>
+    </table>
+
+    <hr size="15px" noshade>
+    <hr>
+
+  </head>
+
+  <body>
+    <p><a href="./index.html"><img align="right" src="./images/icon_home.jpg" alt="Go to home page" border="0" width="40px"></a>
+    <a href='javascript:history.go(-1)'><img align='right' src='./images/icon_back.jpg' alt='Go back' border='0' width='40px'></a></p>
+
+    <form action="advanced_search.php" method="post">
+      <p>
+      <h3>Choose information you want to analyse</h3>
+      <table>
+        <tr><td><input type="checkbox" name="table[]" value="Base_pair" id="table1" onClick="showhide(this.form)"></td><td><a href="#Base_pair">Base Pair</a></td><td><input type="checkbox" name="table[]" value="Optimization_methods" id="table2" onClick="showhide(this.form)"></td><td><a href="#Optimization_methods">Optimization Methods</a></td><td><input type="checkbox" name="table[]" value="Parameters" id="table3" onClick="showhide(this.form)"></td><td><a href="#Parameters">Base Pair Parameters</a></td><td><input type="checkbox" name="table[]" value="BP_geometry" id="table5" onClick="showhide(this.form)"></td><td><a href="#BP_geometry">Base Pair Geometry</a></td><td><input type="checkbox" name="table[]" value="RMSD" id="table4" onClick="showhide(this.form)"></td><td><a href="#RMSD">RMSD values</a></td><td><input type="checkbox" name="table[]" value="H_bond" id="table6" onClick="showhide(this.form)"></td><td><a href="#H_bond">Hydrogen bonds</a></td><td><input type="checkbox" name="table[]" value="Energy" id="table7" onClick="showhide(this.form)"></td><td><a href="#Energy">Energy</a></td><td>&nbsp;&nbsp;</td><td><input type="submit"></td></tr>
+      </table></p>
+
+      <p>
+      <fieldset style="width:600px">
+      <legend><b><a id="Base_pair">Base Pair</a></b></legend></br>
+      <table> 
+      <tr>Choose columns to display:</tr>
+      <tr><td><input type="checkbox" name="Base_pair[]" value="description" id="Base_pair1" disabled></td><td>Description (observed/modelled)</td></tr>
+      <tr><td><input type="checkbox" name="Base_pair[]" value="position_type" id="Base_pair2" disabled></td><td>Position type</td></tr>
+      <tr><td><input type="checkbox" name="Base_pair[]" value="BP_mode" id="Base_pair3" disabled></td><td>Base pair mode</td></tr>
+      <tr><td><input type="checkbox" name="Base_pair[]" value="frequency" id="Base_pair4" disabled></td><td>Frequency</td></tr>
+      <tr><td><input type="checkbox" name="Base_pair[]" value="isostericity_subclass" id="Base_pair5" disabled></td><td>Isostericity subclass</td></tr>
+      <tr><td><input type="checkbox" name="Base_pair[]" value="grp_sugar_rep" id="Base_pair6" disabled></td><td>Group sugar replaced</td></tr>
+      <tr><td><input type="checkbox" name="Base_pair[]" value="ex_PDB" id="Base_pair7" disabled></td><td>Example PDB file</td></tr>
+      <tr><td><input type="checkbox" name="Base_pair[]" value="ex_PDB_reso" id="Base_pair8" disabled></td><td>Resolution of example PDB file</td></tr>
+      <tr><td><input type="checkbox" name="Base_pair[]" value="ex_BP_PDB" id="Base_pair9" disabled></td><td>Example BP in_PDB file</td></tr>
+      <tr><td><input type="checkbox" name="Base_pair[]" value="constrained_atoms" id="Base_pair10" disabled></td><td>Constrained atoms</td></tr>
+      </table>
+      </br>
+      <table>
+      <tr>Choose conditions:</tr>
+      <tr><td><input type="checkbox" name=Base_pair_cond[]" value="BP_name" id="Base_pair11" onchange="document.getElementById('Base_pair12').disabled=!this.checked;" disabled></td><td>Base pair name</td><td><input type="text" name="BP_nametext" id="Base_pair12" value="example A:A" disabled>&nbsp;</td></tr>
+      <tr><td><input type="checkbox" name=Base_pair_cond[]" value="BP_type" id="Base_pair13" onchange="document.getElementById('Base_pair14').disabled=!this.checked;" disabled></td><td>Base pair type</td>
+          <td><select name="BP_typetext" id="Base_pair14" disabled>
+              <option value="W:W">W:W</option>
+              <option value="W:H">W:H</option>
+              <option value="W:S">W:S</option>
+              <option value="H:W">H:W</option>
+              <option value="H:H">H:H</option>
+              <option value="H:S">H:S</option>
+              <option value="S:W">S:W</option>
+              <option value="S:H">S:H</option>
+              <option value="S:S">S:S</option></select></td></tr>
+      <tr><td><input type="checkbox" name=Base_pair_cond[]" value="glyc_bond" id="Base_pair15" onchange="document.getElementById('Base_pair16').disabled=!this.checked;"  disabled></td><td>Glycosidic bond orientation</td>
+         <td><select name="glyc_bondtext" id="Base_pair16" disabled>
+              <option value="Cis">Cis</option>
+              <option value="Trans">Trans</option></select></td></tr>
+      <tr><td><input type="checkbox" name=Base_pair_cond[]" value="isostericity_subclass" id="Base_pair17" onchange="document.getElementById('Base_pair18').disabled=!this.checked;" disabled></td><td>Isostericity subclass</td><td><input type="text" name="isostericity_subclasstext" id="Base_pair18" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Base_pair_cond[]" value="frequency" id="Base_pair19" onchange="document.getElementById('Base_pair20').disabled=!this.checked;" disabled></td><td>Frequency</td><td><input type="text" name="frequencytext" id="Base_pair20" disabled></td></tr>
+      </table>
+      </br>
+      <a href="#top"><img src="./icon_up.jpg" alt="Go to top" border="0" width="15px"></a>
+      </fieldset>
+      </p>
+
+      <p>
+      <fieldset style="width:600px">
+      <legend><b><a id="Optimization_methods">Optimization Methods</a></b></legend></br>
+      <table> 
+      <tr>Choose Optimization method:</tr>
+      <tr><td><select name="Opt_id" id="Optimization_methods1" disabled>
+              <option value="0">--</option>
+              <option value="1">H-opt with HF using basis set 6-31G(d,p) in gas phase</option>
+              <option value="2">Full-opt with HF using basis set 6-31G(d,p) in gas phase</option>
+              <option value="3">Full-opt with B3LYP using basis set 6-31G(d,p) in gas phase</option>
+              <option value="4">Full-opt with B3LYP using basis set 6-31G(d,p) in solvent (COSMO) phase</option></select></td></tr>
+      </table>
+      </br>
+      <a href="#top"><img src="./icon_up.jpg" alt="Go to top" border="0" width="15px"></a>
+      </fieldset>
+      </p>
+
+      <p>
+      <fieldset style="width:600px">
+      <legend><b><a id="Parameters">Parameters</a></b></legend></br>
+      <table> 
+      <tr>Choose columns to display:</tr>
+      <tr><td><input type="checkbox" name="Parameters[]" value="buckle" id="Parameters1" disabled></td><td>Buckle</td></tr>
+      <tr><td><input type="checkbox" name="Parameters[]" value="open" id="Parameters2" disabled></td><td>Open</td></tr>
+      <tr><td><input type="checkbox" name="Parameters[]" value="propeller" id="Parameters3" disabled></td><td>Propeller</td></tr>
+      <tr><td><input type="checkbox" name="Parameters[]" value="stagger" id="Parameters4" disabled></td><td>Stagger</td></tr>
+      <tr><td><input type="checkbox" name="Parameters[]" value="shear" id="Parameters5" disabled></td><td>Shear</td></tr>
+      <tr><td><input type="checkbox" name="Parameters[]" value="strech" id="Parameters6" disabled></td><td>Strech</td></tr>
+      <tr><td><input type="checkbox" name="Parameters[]" value="E_value" id="Parameters7" disabled></td><td>E_value</td></tr>
+      </table>
+      </br>
+      <table>
+      <tr>Choose conditions:</tr>
+      <tr><td><input type="checkbox" name=Parameters_cond[]" value="buckle" id="Parameters8" onchange="document.getElementById('Parameters9').disabled=!this.checked;" disabled></td><td>Buckle</td><td><input type="text" name="buckletext" id="Parameters9" value="<10;>1;!=0" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Parameters_cond[]" value="open" id="Parameters10" onchange="document.getElementById('Parameters11').disabled=!this.checked;" disabled></td><td>Open</td><td><input type="text" name="opentext" id="Parameters11" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Parameters_cond[]" value="propeller" id="Parameters12" onchange="document.getElementById('Parameters13').disabled=!this.checked;" disabled></td><td>Propeller</td><td><input type="text" name="propellertext" id="Parameters13" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Parameters_cond[]" value="stagger" id="Parameters14" onchange="document.getElementById('Parameters15').disabled=!this.checked;" disabled></td><td>Stagger</td><td><input type="text" name="staggertext" id="Parameters15" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Parameters_cond[]" value="shear" id="Parameters16" onchange="document.getElementById('Parameters17').disabled=!this.checked;" disabled></td><td>Shear</td><td><input type="text" name="sheartext" id="Parameters17" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Parameters_cond[]" value="strech" id="Parameters18" onchange="document.getElementById('Parameters19').disabled=!this.checked;" disabled></td><td>Strech</td><td><input type="text" name="strechtext" id="Parameters19" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Parameters_cond[]" value="E_value" id="Parameters20" onchange="document.getElementById('Parameters21').disabled=!this.checked;" disabled></td><td>E_value</td><td><input type="text" name="E_valuetext" id="Parameters21" disabled></td></tr>
+      </table>
+      </br>
+      <a href="#top"><img src="./icon_up.jpg" alt="Go to top" border="0" width="15px"></a>
+      </fieldset>
+      </p>
+
+      <p>
+      <fieldset style="width:600px">
+      <legend><b><a id="BP_geometry">Base pair geometry</a></b></legend></br>
+      <table> 
+      <tr>Choose columns to display:</tr>
+      <tr><td><input type="checkbox" name="BP_geometry[]" value="isostericity_dist" id="BP_geometry1" disabled></td><td>Isostericity distance</td></tr>
+      </table>
+      </br>
+      <table>
+      <tr>Choose conditions:</tr>
+      <tr><td><input type="checkbox" name=BP_geometry_cond[]" value="isostericity_dist" id="BP_geometry2" onchange="document.getElementById('BP_geometry3').disabled=!this.checked;" disabled></td><td>Isostericity distance</td><td><input type="text" name="isostericity_disttext" id="BP_geometry3" disabled></td></tr>
+      </table>
+      </br>
+      <a href="#top"><img src="./icon_up.jpg" alt="Go to top" border="0" width="15px"></a>
+      </fieldset>
+      </p>
+
+      <p>
+      <fieldset style="width:600px">
+      <legend><b><a id="RMSD">RMSD</a></b></legend></br>
+      <table> 
+      <tr>Choose columns to display:</tr>
+      <tr><td><input type="checkbox" name="RMSD[]" value="RMSD_value" id="RMSD1" disabled></td><td>RMSD value</td></tr>
+      </table>
+      </br>
+      <table>
+      <tr>Choose conditions:</tr>
+      <tr><td><input type="checkbox" name=RMSD_cond[]" value="RMSD_value" id="RMSD2" onchange="document.getElementById('RMSD3').disabled=!this.checked;" disabled></td><td>RMSD value</td><td><input type="text" name="RMSD_valuetext" id="RMSD3" value=">-1;<1" disabled></td></tr>
+      </table>
+      </br>
+      <a href="#top"><img src="./icon_up.jpg" alt="Go to top" border="0" width="15px"></a>
+      </fieldset>
+      </p>
+
+      <p>
+      <fieldset style="width:600px">
+      <legend><b><a id="H_bond">H-Bonds</a></b></legend></br>
+      <table> 
+      <tr>Choose columns to display:</tr>
+      <tr><td><input type="checkbox" name="H_bond[]" value="Donor" id="H_bond1" disabled></td><td>Donor</td></tr>
+      <tr><td><input type="checkbox" name="H_bond[]" value="Acceptor" id="H_bond2" disabled></td><td>Acceptor</td></tr>
+      <tr><td><input type="checkbox" name="H_bond[]" value="DA_dist" id="H_bond3" disabled></td><td>DA distance</td></tr>
+      <tr><td><input type="checkbox" name="H_bond[]" value="HA_dist" id="H_bond4" disabled></td><td>HA distance</td></tr>
+      <tr><td><input type="checkbox" name="H_bond[]" value="DHA_angle" id="H_bond5" disabled></td><td>DHA angle</td></tr>
+      </table>
+      </br>
+      <table>
+      <tr>Choose conditions:</tr>
+      <tr><td><input type="checkbox" name=H_bond_cond[]" value="Donor" id="H_bond6" onchange="document.getElementById('H_bond7').disabled=!this.checked;" disabled></td><td>Donor</td><td><input type="text" name="Donortext" id="H_bond7" value="N/O/C" disabled></td></tr>
+      <tr><td><input type="checkbox" name=H_bond_cond[]" value="Acceptor" id="H_bond8" onchange="document.getElementById('H_bond9').disabled=!this.checked;" disabled></td><td>Acceptor</td><td><input type="text" name="Acceptortext" id="H_bond9" value="N/O/C" disabled></td></tr>
+      </table>
+      </br>
+      <a href="#top"><img src="./icon_up.jpg" alt="Go to top" border="0" width="15px"></a>
+      </fieldset>
+      </p>
+
+      <p>
+      <fieldset style="width:600px">
+      <legend><b><a id="Energy">Energy</a></b></legend></br>
+      <table> 
+      <tr>Choose columns to display:</tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_interaction" id="Energy1" disabled></td><td>E_interaction</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_HF" id="Energy2" disabled></td><td>E_HF</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_corr" id="Energy3" disabled></td><td>E_correlation</td></tr>
+      <tr><td></td><td>Kitaura-Morokuma energy decomposition</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_tot" id="Energy4" disabled></td><td>E_total</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_def" id="Energy5" disabled></td><td>E_deformation</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_int" id="Energy6" disabled></td><td>E_interaction</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_elec" id="Energy7" disabled></td><td>E_electrostatic</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_ex" id="Energy8" disabled></td><td>E_exchange repulsion</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_pol" id="Energy9" disabled></td><td>E_polarization</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_ct" id="Energy10" disabled></td><td>E_charge transfer</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_hoc" id="Energy11" disabled></td><td>E_higher order coupling</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="BSSE" id="Energy12" disabled></td><td>BSSE</td></tr>
+      <tr><td></td><td>DFT-SAPT energy decomposition</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_ind_sapt" id="Energy13" disabled></td><td>E_induction</td></tr>
+      <tr><td><input type="checkbox" name="Energy[]" value="E_disp_sapt" id="Energy14" disabled></td><td>E_dispersion</td></tr>
+      </table>
+      </br>
+      <table>
+      <tr>Choose conditions:</tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_interaction" id="Energy15" onchange="document.getElementById('Energy16').disabled=!this.checked;" disabled></td><td>E_interaction</td><td><input type="text" name="E_interactiontext" id="Energy16" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_HF" id="Energy17" onchange="document.getElementById('Energy18').disabled=!this.checked;" disabled></td><td>E_HF</td><td><input type="text" name="E_HFtext" id="Energy18" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_corr" id="Energy19" onchange="document.getElementById('Energy20').disabled=!this.checked;" disabled></td><td>E_correlation</td><td><input type="text" name="E_corrtext" id="Energy20" disabled></td></tr>
+      <tr><td></td><td>Kitaura-Morokuma energy decomposition</td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_tot" id="Energy21" onchange="document.getElementById('Energy22').disabled=!this.checked;" disabled></td><td>E_total</td><td><input type="text" name="E_tottext" id="Energy22" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_def" id="Energy23" onchange="document.getElementById('Energy24').disabled=!this.checked;" disabled></td><td>E_deformation</td><td><input type="text" name="E_deftext" id="Energy24" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_int" id="Energy25" onchange="document.getElementById('Energy26').disabled=!this.checked;" disabled></td><td>E_interaction</td><td><input type="text" name="E_inttext" id="Energy26" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_elec" id="Energy27" onchange="document.getElementById('Energy28').disabled=!this.checked;" disabled></td><td>E_electrostatic</td><td><input type="text" name="E_electext" id="Energy28" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_ex" id="Energy29" onchange="document.getElementById('Energy30').disabled=!this.checked;" disabled></td><td>E_exchange repulsion</td><td><input type="text" name="E_extext" id="Energy30" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_pol" id="Energy31" onchange="document.getElementById('Energy32').disabled=!this.checked;" disabled></td><td>E_polarization</td><td><input type="text" name="E_poltext" id="Energy32" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_ct" id="Energy33" onchange="document.getElementById('Energy34').disabled=!this.checked;" disabled></td><td>E_charge transfer</td><td><input type="text" name="E_cttext" id="Energy34" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_hoc" id="Energy35" onchange="document.getElementById('Energy36').disabled=!this.checked;" disabled></td><td>E_higher order coupling</td><td><input type="text" name="E_hoctext" id="Energy36" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="BSSE" id="Energy37" onchange="document.getElementById('Energy38').disabled=!this.checked;" disabled></td><td>BSSE</td><td><input type="text" name="BSSEtext" id="Energy38" disabled></td></tr>
+      <tr><td></td><td>DFT-SAPT energy decomposition</td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_ind_sapt" id="Energy39" onchange="document.getElementById('Energy40').disabled=!this.checked;" disabled></td><td>E_induction</td><td><input type="text" name="E_ind_sapttext" id="Energy40" disabled></td></tr>
+      <tr><td><input type="checkbox" name=Energy_cond[]" value="E_disp_sapt" id="Energy41" onchange="document.getElementById('Energy42').disabled=!this.checked;" disabled></td><td>E_dispersion</td><td><input type="text" name="E_disp_sapttext" id="Energy42" disabled></td></tr>
+      </table>
+      </br>
+      <a href="#top"><img src="./images/icon_up.jpg" alt="Go to top" border="0" width="15px"></a>
+      </fieldset>
+      </p>
+
+    </form>
+  </body>
+
+</html>

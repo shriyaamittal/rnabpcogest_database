@@ -1,0 +1,130 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/energy.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"> 
+    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./js/dynamicDropDown.js"></script>
+
+    <title>
+      Structure
+    </title>
+
+    <hr size="15px" noshade>
+    <hr>
+
+    <table>
+      <tr>
+        <td align="left"><img src="./images/monogram.png" alt="monogram" width="150px"></td>
+        <td align="center" width="80%"><img src="./images/structure.png" alt="logo" width="500px"></td>
+        <td align="right"><a href="http://iiit.ac.in/"><img src="./images/IIIT.jpg" alt="IIIT-H" width="150px"></a></td>
+      </tr>
+    </table>
+
+    <hr size="15px" noshade>
+    <hr>
+
+  </head>
+
+  <body>
+    <p><a href="./index.html"><img align="right" src="./images/icon_home.jpg" alt="Go to home page" border="0" width="40px"></a>
+    <a href='javascript:history.go(-1)'><img align='right' src='./images/icon_back.jpg' alt='Go back' border='0' width='40px'></a></p>
+
+
+This page provides some search option based structural parameters. Six base pair parameters (buckle, proppeller, open, stagger, shear, stretch) and E value of a given base pair provide some insight about spatial arrangement of two bases and goodness of a particular base pair in terms of planarity and H-bonding.</br></br>
+
+Through the first searching option it is possible to retrieve base pair information having particular range of base pair parameter values. It is also possible to customize the search option by defining specific ranges of multiple base pair parameters at a time. Here users have an option for selecting optimization method, which will give base pair parameters of different ground state optimized structures, where the optimization method is same for all.</br></br>
+
+E value is a composite parameter calculated as: E = &#8721;<sub>i</sub> (d<sub>i</sub> - 3.0)<sup>2</sup> + &frac12; &#8721;<sub>j</sub> (&Theta;<sub>j</sub> - &#8719;)<sup>2</sup> (where, d<sub>i</sub> : hydrogen bond heavy atom distance between two bases under consideration , &Theta;<sub>j</sub> : angle subtended by precursor atoms of both the bases, i : the number of hydrogen bonds that can occur between the two bases, j : the number of pseudo angles for a base pair). Goodness of basepairs increase with decreasing E_values. Through this page user can search for hydrogen optimized and full optimized base pairs that lie under specified E_value ranges.</br></br>
+
+Again, from the third searching option user can obtain occurrences of a particular base pair in the non redundant crystal structure dataset, having E value better or poorer than its corresponding full optimized structure.</br></br>
+<b>1. Search based on Base Pair parameter</b>
+    <form action="./structure.php" method="post">
+      <table>
+	<tr><td></td><td>Choose Optimization method</td><td><select name="Opt_id" id="Optimization_methods1">
+              <option value="0">--</option>
+              <option value="1">H-opt with HF using basis set 6-31G(d,p) in gas phase</option>
+              <option value="2">Full-opt with HF using basis set 6-31G(d,p) in gas phase</option>
+              <option value="3">Full-opt with B3LYP using basis set 6-31G(d,p) in gas phase</option>
+              <option value="4">Full-opt with B3LYP using basis set 6-31G(d,p) in solvent (COSMO) phase</option>
+              <option value="5">H-opt with B3LYP ccPVTZ in gas phase</option>
+              <option value="6">Full-opt with B3LYP ccPVTZ in gas phase</option>
+
+	</select></td></tr>
+	<tr><td><input type="checkbox" name="energy[]" value="buckle" id="c1" onchange="document.getElementById('t1').disabled=!this.checked;"></td><td>Buckle</td><td><input type="text" name="buckletext" id="t1" disabled></td></tr>
+	<tr><td><input type="checkbox" name=energy[]" value="open" id="c2" onchange="document.getElementById('t2').disabled=!this.checked;"></td><td>Open</td><td><input type="text" name="opentext" id="t2" disabled></td></tr>
+	<tr><td><input type="checkbox" name=energy[]" value="propeller" id="c3" onchange="document.getElementById('t3').disabled=!this.checked;"></td><td>Propeller</td><td><input type="text" name="propellertext" id="t3" disabled></td></tr>
+	<tr><td><input type="checkbox" name="energy[]" value="stagger" id="c4" onchange="document.getElementById('t4').disabled=!this.checked;"></td><td>Stagger</td><td><input type="text" name="staggertext" id="t4" disabled></td></tr>
+	<tr><td><input type="checkbox" name=energy[]" value="shear" id="c5" onchange="document.getElementById('t5').disabled=!this.checked;"></td><td>Shear</td><td><input type="text" name="sheartext" id="t5" disabled></td></tr>
+	<tr><td><input type="checkbox" name=energy[]" value="strech" id="c6" onchange="document.getElementById('t6').disabled=!this.checked;"></td><td>Strech</td><td><input type="text" name="strechtext" id="t6" disabled></td></tr>
+      </table>
+      <input type="submit" name="submit_form" value="submit"></td>
+
+    </form>
+<b>2. E_value Based Search (for optimized structure only)</b></br>
+ <form action="./structure1.php" method="post">
+      <table>
+        <tr><td>Choose Optimization method</td><td><select name="Opt_id" id="Optimization_methods1">
+              <option value="0">--</option>
+              <option value="1">H-opt with HF using basis set 6-31G(d,p) in gas phase</option>
+              <option value="2">Full-opt with HF using basis set 6-31G(d,p) in gas phase</option>
+              <option value="3">Full-opt with B3LYP using basis set 6-31G(d,p) in gas phase</option>
+              <option value="4">Full-opt with B3LYP using basis set 6-31G(d,p) in solvent (COSMO) phase</option>
+              <option value="5">H-opt with B3LYP ccPVTZ in gas phase</option>
+              <option value="6">Full-opt with B3LYP ccPVTZ in gas phase</option>
+        </select></td></tr>
+        <tr><td>E_value</td><td><input type="text" name="E_valuetext" id="t7"></td></tr>
+ </table>
+      <input type="submit" name="submit_form" value="submit"></td>
+    </form>
+
+<b>3. E_value Based Search depending on occurences in the non-redundant dataset</b></br>
+    <form action="./structure2.php" method="POST">
+      <table>
+	<tr></br>Choose the base pair from the drop-down menus and click on "Submit" to view count, geometry and stability information of the base pair! </br></br></tr>
+<div id="div_dynamic_dropDown">
+        <div id="div_dropDown_1">
+              <label for="select_1">Please select Base Pair type: </label>
+                <span style="margin-left: 40px;">
+                       <select id="select_1" name="select_1"></select>
+                </span>
+        </div>
+
+        <div id="div_dropDown_2">
+                <label for="select_2">Please select Glycosidic Bond orientation: </label>
+                <span style="margin-left: 27px;">
+                        <select id="select_2" disabled='disabled' name="select_2">
+                                <option val="none">None</option>
+                        </select>
+                </span>
+        </div>
+
+        <div id="div_dropDown_3">
+                <label for="select_3" disabled='disabled'>Please select Base Pair name: </label>
+                <span style="margin-left: 32px;">
+                        <select id="select_3" name="select_3">
+                                <option val="none">None</option>
+                        </select>
+                </span>
+        </div>
+	Occurences of Base pairs having E_value
+	<select name="sign" id="sign_for_evalue">
+		<option value=">">&gt;</option>
+		<option value="<">&lt;</option>
+	</select>
+	than E_value of the <select name="Opt_id" id="Optimization_methods1">
+              <option value="0">--</option>
+              <option value="2">Full-opt with HF using basis set 6-31G(d,p) in gas phase</option>
+              <option value="3">Full-opt with B3LYP using basis set 6-31G(d,p) in gas phase</option>
+              <option value="4">Full-opt with B3LYP using basis set 6-31G(d,p) in solvent (COSMO) phase</option>
+              <option value="6">Full-opt with B3LYP ccPVTZ in gas phase</option></select>
+ optimized geometries.
+	<tr><td></br><input type="submit"></td></tr>
+
+    </table>
+    </form>
+
+  </body>
+
+</html>

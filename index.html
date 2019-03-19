@@ -1,0 +1,320 @@
+<html>
+
+ <head>
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./js/dynamicDropDown.js"></script>
+ 
+    <title>
+      RNABP COGEST
+    </title>
+  </head>
+
+  <body>
+    <hr size="15px" noshade>
+    <hr>
+    <table>
+      <tr>
+        <td align="left"><img src="./images/monogram.png" alt="monogram" width="150px"></td>
+        <td align="center" width="80%"><img src="./images/logo.png" alt="logo" width="500px"></td>
+        <td align="right"><a href="http://iiit.ac.in/"><img src="./images/IIIT.jpg" alt="IIIT-H" width="150px"></a></td>
+      </tr>
+    </table>
+    
+    <hr size="15px" noshade>
+    <hr>
+   
+
+    <p>
+      <table>
+        <tr>
+          <td align="left" valign='top'></br>Hydrogen bonded non-canonical base pairs have been implicated as key players in shaping the structural complexity and functional diversity of non (protein) coding RNA molecules. To explore specific functionalities of different non-canonical base pairs in structural and functional context of RNA, one needs to understand structural dynamics of a RNA molecules. </br></br>Again, intrinsic stability of different non-canonical basepairs, present in a complex RNA molecule, in turn influnece its overall  dynamics. Calculation of intrinsic interaction energy of different base pairing geometries using ab-initio and DFT based Quantum Mechanical (QM) methods can provide significant inputs in this context. Analysis of variation in geometry and intrinsic interaction energy, between the crystal and ground state optimized structures, supplemented with an analysis of structural environment, can provide insights into the physicochemical role of specific base pairs in shaping the structure and dynamics of functional RNAs.</br></br> <b>RNA Base Pair Count Geometry and Stability (RNABP COGEST)</b>, is a relational database which provides, consolidated QM analysis data regarding interaction energies and structural parameters of both crystal and ground state optimized geometries, and occurrences of all putative base pairing geometries in available crystal structure database at a glance. </br></br> A number of user friendly searching options has been implemented here to navigate through the database for different types of scientific interests.</td>
+          <td width="10%" align="center" valign='top'>
+
+      <fieldset>
+      <legend>Base Pair information</legend>
+      <table><tr>
+        <form action="./home.php" method="post"><tr></br>Choose the base pair from the drop-down menus and click on "Submit" to view count, geometry and stability information of the base pair! </br></tr>
+<div id="div_dynamic_dropDown">
+        <div id="div_dropDown_1">
+              <label for="select_1">Please select Base Pair type: </label>
+                <span style="margin-left: 40px;">
+                       <select id="select_1" name="select_1"></select>
+                </span>
+        </div>
+
+        <div id="div_dropDown_2">
+                <label for="select_2">Please select Glycosidic Bond orientation: </label>
+                <span style="margin-left: 27px;">
+                        <select id="select_2" disabled='disabled' name="select_2">
+                                <option val="none">None</option>
+                        </select>
+                </span>
+        </div>
+
+        <div id="div_dropDown_3">
+                <label for="select_3" disabled='disabled'>Please select Base Pair name: </label>
+                <span style="margin-left: 32px;">
+                        <select id="select_3" name="select_3">
+                                <option val="none">None</option>
+                        </select>
+                </span>
+        </div>
+        <div id="div_dropDown_4">
+                <label for="select_4" disabled='disabled'>Please select Protonated atom: </label>
+                <span style="margin-left: 21px;">
+                        <select id="select_4" name="select_4">
+                                <option val="none">None</option>
+                        </select>
+                </span>
+        </div>
+</div>
+
+
+
+        <tr><td><input type="submit"></td></tr>
+        </form>
+      </table>
+
+      </fieldset>
+
+	</br>
+      <fieldset>
+      <legend>Base Pair information</legend>
+
+<form action="home_freq.php" method="POST">
+<table><tr><td>Frequency of Base Pair is <select name="sign" id="sign_forfreq"><option value="<">&lt;</option><option value=">">&gt;</option><select> than <input type="text" name="number"></td></tr>
+
+<tr><td><input type="submit"></td></tr></table>
+</form>
+</fieldset>
+
+
+
+
+          </td>
+        </tr>
+      </table>
+    </p>
+
+    <p>
+      <table>
+        <tr>
+          <td align="left" valign='top'>
+
+	<form action="./home1.php" method="post">
+Choose the base pair of your choice and click submit below to see information available!</br></br>
+      <table border="1" id="table1" cellpadding="5">
+        <tr><th></th>
+            <th>Ade W</th>
+            <th>Ade H</th>
+            <th>Ade S</th>
+            <th>Gua W</th>
+            <th>Gua H</th>
+            <th>Gua S</th>
+            <th>Cyt W</th>
+            <th>Cyt H</th>
+            <th>Cyt S</th>
+            <th>Ura W</th>
+            <th>Ura H</th>
+            <th>Ura S</th></tr>
+        <tr><th>Ade W</th>
+	    <td align="center"><input type="radio" name="bp" value="aaww"></td>
+            <td align="center"><input type="radio" name="bp" value="aawh"></td>
+            <td align="center"><input type="radio" name="bp" value="aaws"></td>
+	    <td align="center"><input type="radio" name="bp" value="agww"></td>
+            <td align="center"><input type="radio" name="bp" value="agwh"></td>
+            <td align="center"><input type="radio" name="bp" value="agws"></td>
+	    <td align="center"><input type="radio" name="bp" value="acww"></td>
+            <td align="center"></td>
+            <td align="center"><input type="radio" name="bp" value="acws"></td>
+	    <td align="center"><input type="radio" name="bp" value="auww"></td>
+            <td align="center"><input type="radio" name="bp" value="auwh"></td>
+            <td align="center"><input type="radio" name="bp" value="auws"></td>
+	</tr>
+        <tr><th>Ade H</th>
+	    <td align="center"><input type="radio" name="bp" value="aawh"></td>
+            <td align="center"><input type="radio" name="bp" value="aahh"></td>
+            <td align="center"><input type="radio" name="bp" value="aahs"></td>
+	    <td align="center"><input type="radio" name="bp" value="gawh"></td>
+            <td align="center"><input type="radio" name="bp" value="aghh"></td>
+            <td align="center"><input type="radio" name="bp" value="aghs"></td>
+	    <td align="center"><input type="radio" name="bp" value="achw"></td>
+            <td align="center"><input type="radio" name="bp" value="achh"></td>
+            <td align="center"><input type="radio" name="bp" value="achs"></td>
+	    <td align="center"><input type="radio" name="bp" value="auhw"></td>
+            <td align="center"><input type="radio" name="bp" value="auhh"></td>
+            <td align="center"><input type="radio" name="bp" value="auhs"></td>
+	</tr>
+        <tr><th>Ade S</th>
+	    <td align="center"><input type="radio" name="bp" value="aaws"></td>
+            <td align="center"><input type="radio" name="bp" value="aahs"></td>
+            <td align="center"><input type="radio" name="bp" value="aass"></td>
+	    <td align="center"><input type="radio" name="bp" value="agsw"></td>
+            <td align="center"><input type="radio" name="bp" value="agsh"></td>
+            <td align="center"><input type="radio" name="bp" value="agss"></td>
+	    <td align="center"><input type="radio" name="bp" value="acsw"></td>
+            <td align="center"><input type="radio" name="bp" value="acsh"></td>
+            <td align="center"><input type="radio" name="bp" value="acss"></td>
+	    <td align="center"><input type="radio" name="bp" value="ausw"></td>
+            <td align="center"><input type="radio" name="bp" value="aush"></td>
+            <td align="center"><input type="radio" name="bp" value="auss"></td>
+        </tr>
+        <tr><th>Gua W</th>
+	    <td align="center"><input type="radio" name="bp" value="agww"></td>
+            <td align="center"><input type="radio" name="bp" value="gawh"></td>
+            <td align="center"><input type="radio" name="bp" value="agsw"></td>
+	    <td align="center"><input type="radio" name="bp" value="ggww"></td>
+            <td align="center"><input type="radio" name="bp" value="ggwh"></td>
+            <td align="center"><input type="radio" name="bp" value="ggws"></td>
+	    <td align="center"><input type="radio" name="bp" value="gcww"></td>
+            <td align="center"></td>
+            <td align="center"><input type="radio" name="bp" value="gcws"></td>
+	    <td align="center"><input type="radio" name="bp" value="guww"></td>
+            <td align="center"><input type="radio" name="bp" value="guwh"></td>
+            <td align="center"><input type="radio" name="bp" value="guws"></td>
+        </tr>
+        <tr><th>Gua H</th>
+	    <td align="center"><input type="radio" name="bp" value="agwh"></td>
+            <td align="center"><input type="radio" name="bp" value="aghh"></td>
+            <td align="center"><input type="radio" name="bp" value="agwh"></td>
+	    <td align="center"><input type="radio" name="bp" value="ggwh"></td>
+            <td align="center"><input type="radio" name="bp" value="gghh"></td>
+            <td align="center"><input type="radio" name="bp" value="gghs"></td>
+	    <td align="center"><input type="radio" name="bp" value="gchw"></td>
+            <td align="center"><input type="radio" name="bp" value="gchh"></td>
+            <td align="center"><input type="radio" name="bp" value="gchs"></td>
+	    <td align="center"><input type="radio" name="bp" value="guhw"></td>
+            <td align="center"><input type="radio" name="bp" value="guhh"></td>
+            <td align="center"><input type="radio" name="bp" value="guhs"></td>
+        </tr>
+        <tr><th>Gua S</th>
+	    <td align="center"><input type="radio" name="bp" value="agws"></td>
+            <td align="center"><input type="radio" name="bp" value="aghs"></td>
+            <td align="center"><input type="radio" name="bp" value="agss"></td>
+	    <td align="center"><input type="radio" name="bp" value="ggws"></td>
+            <td align="center"><input type="radio" name="bp" value="gghs"></td>
+            <td align="center"><input type="radio" name="bp" value="ggss"></td>
+	    <td align="center"><input type="radio" name="bp" value="gcsw"></td>
+            <td align="center"><input type="radio" name="bp" value="gcsh"></td>
+            <td align="center"><input type="radio" name="bp" value="gcss"></td>
+	    <td align="center"><input type="radio" name="bp" value="gusw"></td>
+            <td align="center"><input type="radio" name="bp" value="gush"></td>
+            <td align="center"><input type="radio" name="bp" value="guss"></td>
+        </tr>
+        <tr><th>Cyt W</th>
+	    <td align="center"><input type="radio" name="bp" value="acww"></td>
+            <td align="center"><input type="radio" name="bp" value="achw"></td>
+            <td align="center"><input type="radio" name="bp" value="acsw"></td>
+	    <td align="center"><input type="radio" name="bp" value="gcww"></td>
+            <td align="center"><input type="radio" name="bp" value="gchw"></td>
+            <td align="center"><input type="radio" name="bp" value="gcsw"></td>
+	    <td align="center"><input type="radio" name="bp" value="ccww"></td>
+            <td align="center"><input type="radio" name="bp" value="ccwh"></td>
+            <td align="center"><input type="radio" name="bp" value="ccws"></td>
+	    <td align="center"><input type="radio" name="bp" value="cuww"></td>
+            <td align="center"><input type="radio" name="bp" value="cuwh"></td>
+            <td align="center"><input type="radio" name="bp" value="cuws"></td>
+        </tr>
+        <tr><th>Cyt H</th>
+	    <td align="center"></td>
+            <td align="center"><input type="radio" name="bp" value="achh"></td>
+            <td align="center"><input type="radio" name="bp" value="acsh"></td>
+	    <td align="center"></td>
+            <td align="center"><input type="radio" name="bp" value="gchh"></td>
+            <td align="center"><input type="radio" name="bp" value="gcsh"></td>
+	    <td align="center"><input type="radio" name="bp" value="ccwh"></td>
+            <td align="center"></td>
+            <td align="center"><input type="radio" name="bp" value="cchs"></td>
+	    <td align="center"></td>
+            <td align="center"><input type="radio" name="bp" value="cuhh"></td>
+            <td align="center"><input type="radio" name="bp" value="cuhs"></td>
+        </tr>
+        <tr><th>Cyt S</th>
+	    <td align="center"><input type="radio" name="bp" value="acws"></td>
+            <td align="center"><input type="radio" name="bp" value="achs"></td>
+            <td align="center"><input type="radio" name="bp" value="acss"></td>
+	    <td align="center"><input type="radio" name="bp" value="gcws"></td>
+            <td align="center"><input type="radio" name="bp" value="gchs"></td>
+            <td align="center"><input type="radio" name="bp" value="gcss"></td>
+	    <td align="center"><input type="radio" name="bp" value="ccws"></td>
+            <td align="center"><input type="radio" name="bp" value="cchs"></td>
+            <td align="center"><input type="radio" name="bp" value="ccss"></td>
+	    <td align="center"><input type="radio" name="bp" value="cusw"></td>
+            <td align="center"><input type="radio" name="bp" value="cush"></td>
+            <td align="center"><input type="radio" name="bp" value="cuss"></td>
+        </tr>
+        <tr><th>Ura W</th>
+	    <td align="center"><input type="radio" name="bp" value="auww"></td>
+            <td align="center"><input type="radio" name="bp" value="auhw"></td>
+            <td align="center"><input type="radio" name="bp" value="ausw"></td>
+	    <td align="center"><input type="radio" name="bp" value="guww"></td>
+            <td align="center"><input type="radio" name="bp" value="guhw"></td>
+            <td align="center"><input type="radio" name="bp" value="gusw"></td>
+	    <td align="center"><input type="radio" name="bp" value="cuww"></td>
+            <td align="center"></td>
+            <td align="center"><input type="radio" name="bp" value="cusw"></td>
+	    <td align="center"><input type="radio" name="bp" value="uuww"></td>
+            <td align="center"><input type="radio" name="bp" value="uuwh"></td>
+            <td align="center"><input type="radio" name="bp" value="uuws"></td>
+        </tr>
+        <tr><th>Ura H</th>
+	    <td align="center"><input type="radio" name="bp" value="auwh"></td>
+            <td align="center"><input type="radio" name="bp" value="auhh"></td>
+            <td align="center"><input type="radio" name="bp" value="aush"></td>
+	    <td align="center"><input type="radio" name="bp" value="guwh"></td>
+            <td align="center"><input type="radio" name="bp" value="guhh"></td>
+            <td align="center"><input type="radio" name="bp" value="gush"></td>
+	    <td align="center"><input type="radio" name="bp" value="cush"></td>
+            <td align="center"><input type="radio" name="bp" value="cuhh"></td>
+            <td align="center"><input type="radio" name="bp" value="cush"></td>
+	    <td align="center"><input type="radio" name="bp" value="uuwh"></td>
+            <td align="center"><input type="radio" name="bp" value="uuhh"></td>
+            <td align="center"><input type="radio" name="bp" value="uuhs"></td>
+        </tr>
+        <tr><th>Ura S</th>
+	    <td align="center"><input type="radio" name="bp" value="auws"></td>
+            <td align="center"><input type="radio" name="bp" value="auhs"></td>
+            <td align="center"><input type="radio" name="bp" value="auss"></td>
+	    <td align="center"><input type="radio" name="bp" value="guws"></td>
+            <td align="center"><input type="radio" name="bp" value="guhs"></td>
+            <td align="center"><input type="radio" name="bp" value="guss"></td>
+	    <td align="center"><input type="radio" name="bp" value="cuws"></td>
+            <td align="center"><input type="radio" name="bp" value="cuhs"></td>
+            <td align="center"><input type="radio" name="bp" value="cuss"></td>
+	    <td align="center"><input type="radio" name="bp" value="uuws"></td>
+            <td align="center"><input type="radio" name="bp" value="uuhs"></td>
+            <td align="center"><input type="radio" name="bp" value="uuss"></td>
+        </tr><tr></tr>
+      </table></br>
+	<input type="submit"></form>
+
+          </td>
+          <td width="10%" align="center" valign='top'>
+
+            <fieldset>
+            <legend>Quick links</legend>
+	    <a href="./energy.html">Energy based search</a></br>
+	    <a href="./structure.html">Structure based search</a></br>
+	    <a href="./page_under_cons.html">Hydrogen bond based search</a></br>
+	    <a href="./advanced_search.html">Advanced Search</a></br>
+	    <a href="./legend.html">General Information</a></br>
+	    <a href="./help.html">Help</a></br>
+	    <a href="./references.pdf">References</a></br>
+	    <a href="./page_under_cons.html">Contact Us</a></br>
+            </fieldset>
+
+          </td>
+        <tr>
+      </table>
+    </p>
+   
+    <hr size="15px" noshade>
+    <hr>
+   <font size="2"> RNABP COGEST &copy; CCNSB, IIIT Hyderabad 2014</br>
+
+  </body>
+
+</html>
